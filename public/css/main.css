@@ -1,0 +1,697 @@
+/*  Import new fonts  */
+@font-face {
+    font-family:"MysteryCurse";
+    src: url("font.ttf") /* TTF file for CSS3 browsers */
+}
+
+/* Declare color constants
+$blue = #0275D8;
+$grey = #ECEEEF;
+ */
+
+
+/*      ------------- General page settings ----------------           */
+.img-cont{
+    width: 100%;
+}
+
+html, body {
+    font-family: "Times New Roman";
+    font-size: 0.9rem;
+}
+
+body{
+    position: relative;
+    background: none;
+}
+
+.jumbotron {
+    margin-top: 2%;
+    margin-bottom: 0;
+}
+
+#jumbotron-text {
+    text-align: center;
+    vertical-align: bottom;
+    font-size: 5em;
+    display: inline-block;
+    color: white;
+}
+
+#jumbotron-top{
+    background-image: url('../images/desk3-min.jpg');
+    background-repeat: no-repeat;
+    height: 70vw;
+    border-bottom: none;
+    background-size: 115vw;
+    margin-bottom: 0;
+}
+
+section {
+    padding: 5%;
+}
+
+.section-heading {
+    color: black;
+    padding: 1%;
+}
+
+
+.nameText, .subText {
+    position: absolute;
+    font-size: 4vw;
+    color: white;
+    transform: rotate(-30deg);
+    margin-top: 8%;
+    left: -2%;
+    font-family: MysteryCurse;
+}
+
+.subText {
+    font-size: 3vw;
+    margin-top: 15%;
+    left: 10%;
+}
+
+
+
+#contact, #services, #quote, #education, .jumbotron-border {
+    background-color: #ECEEEF;
+    border-top: 0.1em solid #0275D8;
+    border-top-width: thick;
+    border-bottom: 0.1em solid #0275D8;
+    border-bottom-width: thick;
+    margin-top: 0;
+}
+
+
+.top {
+    position: fixed;
+    margin-right: 5%;
+    display: none;
+	z-index: 999;
+    right: 2rem;
+    top: 50rem;
+}
+
+
+.footer-links {
+    margin-right: 5%;
+    display: inline-block;
+}
+
+.footer-links:hover {
+    background-color: white;
+    padding: 1rem;
+    border: 0.5rem solid #0275D8;
+    border-radius: 50%;
+    transition: all 0.7s ease-in-out;
+}
+
+.btn-inline {
+  display: inline;
+}
+
+.contact-form-control  {
+    height: 5rem;
+    border: 0.1rem solid #0275D8;
+    border-left-width: thick;
+}
+
+
+/*      ------------- Navigation settings ----------------           */
+
+#navbarNavDropdown{
+    font-size: 1.1rem;
+}
+.nav-tabs {
+    border: none;
+}
+
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    background-color:white;
+}
+
+.navbar-brand {
+    height: 3rem;
+}
+
+.logo {
+    height: 100%;
+}
+
+.blockquote {
+    font-family: MysteryCurse;
+    font-size: 4vw;
+}
+/*      -----------------------------------------------------------------------           */
+
+/*      ------------- About settings ----------------           */
+
+#about-description {
+    text-align: justify;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+}
+
+.personal-image {
+    background-color: white;
+    border: 0.5rem solid #0275D8;
+    border-radius: 50%;
+    width: 110%;
+    padding: 1%;
+}
+
+#card1, #card2, #card3, #card4, #card5, #card6 {
+    height: 12vw;
+    width: 12vw;
+    margin: 2rem 0;
+    text-align-last: center;
+}
+
+.front {
+    background-image: url(../images/qmark-min.png);
+    background-size: contain;
+    color: white;
+}
+
+.back {
+    background-color: #ECEEEF;
+    color: #0275D8;
+    padding: 5%;
+    font-size: 1vw;
+
+}
+
+.fun-facts-format {
+    background-color: white;
+    border: 0.5rem solid #0275D8;
+    border-radius: 20%;
+    padding: 5%;
+    font-size: 0.8vw;
+}
+/*      -----------------------------------------------------------------------           */
+
+/*      ------------- Skills settings ----------------           */
+
+.skills-format {
+    border: 0.1rem solid #0275D8;
+    width: 95%;
+    margin: 2%;
+    padding: 2%;
+    border-left-color: dodgerblue;
+    border-left-width: thick;
+    background-color: #ECEEEF;
+    text-align: left;
+    line-height: 1.2rem;
+    font-size: 1rem;
+}
+
+
+/*      -----------------------------------------------------------------------           */
+
+/*      ------------- Projects settings ----------------           */
+
+.card {
+    border: 0.1rem solid #0275D8;
+    border-left-width: thick;
+    background-color: #ECEEEF;
+    line-height: 2rem;
+    width: 100%;
+    margin-bottom: 5%;
+    text-align: center;
+}
+
+.card-title {
+    color: #0275D8;
+    padding-bottom: 5%;
+}
+
+.card-text, .modal-body {
+    font-size: 1rem;
+}
+
+.card-img-top {
+    padding-top: 5%;
+}
+
+.card:hover {
+    cursor: pointer;
+
+}
+
+/*
+
+.modal-header {
+    background-color: #ECEEEF;
+    border-bottom: 0.2rem solid #0275D8;
+}
+
+.modal-body {
+    padding: 1%;
+    text-align: justify;
+}
+
+*/
+
+.badge {display: inline;}
+
+.modal-admin {
+    width: 80%;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.modal-project-content{
+  width: 80vw !important;
+  left: -20vw;
+}
+
+.presentation-image {
+    width: 10rem;
+    height: 10rem;
+}
+
+
+
+.project-layout {
+    background-color: white;
+    text-align: justify;
+   /* font-family: */
+    line-height: 2rem;
+}
+
+.project-left-panel {
+    line-height: 3rem;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 1%;
+}
+
+.project-right-panel {
+    border-left: 0.3rem solid #0275D8;
+    padding: 1% 5%;
+    text-align: justify;
+    line-height: 2rem;
+
+}
+
+.project-left-item {
+    padding: 1% 5%;
+    text-align: center;
+    background-color: #ECEEEF;
+    color: #0275D8;
+    border: 0.1rem solid white;
+    box-shadow: 0.5rem 0.5rem 0.2rem #0275D8;
+    width: 80%;
+    margin: auto 10%;
+    margin-bottom: 2%;
+}
+
+.project-description {
+    /* font-family: "EB Garamond", cursive;*/
+    text-align: justify;
+    padding: 0 2%;
+}
+
+.image-project {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.tools-tag {
+    background-color: #0275D8;
+    color: white;
+    border: 0.1rem solid white;
+    display: inline-block;
+    padding-left: 2%;
+    padding-right: 2%;
+    line-height: 2rem;
+}
+
+data-lightbox { width:200rem; height:200rem; }
+
+/*      -----------------------------------------------------------------------           */
+
+/*      ------------- Contact settings ----------------           */
+
+#content {
+    width: 100%;
+    height: 20vh;
+}
+
+.alert {
+    font-size: 1.2rem;
+}
+
+
+#showMap:hover {
+    cursor: pointer;
+}
+
+#map {
+    display: none;
+    height: 50rem;
+}
+
+iframe{
+    height: 40rem;
+}
+
+/*      -----------------------------------------------------------------------           */
+
+/* -----------------------------  Education settings        ----------------------------- */
+
+.modules {
+    text-align: left;
+    font-size: 100%;
+}
+
+/*
+#Below code is not my property, all rights belong to the owner(s)
+#Source: http://bootsnipp.com/snippets/featured/timeline
+*/
+
+.timeline-left, .timeline-right {
+    padding: 1% 5%;
+
+}
+
+.timeline-left {
+    font-size: 2rem;
+}
+
+
+.timeline-right {
+    border-left: 0.5rem dotted black;
+    padding-top: 10%;
+    margin-bottom: 2%;
+}
+
+
+
+ .timeline {
+	width:100%;
+	margin:0 auto;
+	overflow:auto;
+	padding:2%;
+}
+
+
+.right-content, .left-content {
+	float:left;
+	display:block;
+	width:50%;
+	padding:1% 2%;
+    font-size: 2rem;
+}
+
+.right-content {
+    font-size: 1.2rem;
+}
+
+.left-content {
+	border-right:0.5rem dotted #666;
+	text-align:right;
+}
+
+.left-content div {
+	margin: 5% 10% 30%;
+}
+
+.right-content div {
+	margin: 15% 0% 30%; /*   top left-right bottom   */
+    text-align: left;
+}
+
+.timeline p {
+-webkit-transition: all 0.9s ease-in-out;
+-moz-transition: all 0.9s ease-in-out;
+-ms-transition: all 0.9s ease-in-out;
+-o-transition: all 0.9s ease-in-out;
+transition: all 0.9s ease-in-out;
+}
+
+.left-content .more-padding {
+  padding-right:50%;
+}
+
+.right-content .more-padding {
+  padding-left:50%;
+}
+
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+
+}
+
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #eeeeee;
+        left: 50%;
+        margin-left: -1.5px;
+        background: rgb(80,80,80);
+        background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+        background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+        background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+        background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+        background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+
+    }
+
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li > .timeline-panel {
+            width: 42%;
+            float: left;
+            border: 1px solid #d4d4d4;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        }
+
+            .timeline > li > .timeline-panel:before {
+                position: absolute;
+                top: 26px;
+                right: -15px;
+                display: inline-block;
+                border-top: 15px solid transparent;
+                border-left: 15px solid #ccc;
+                border-right: 0 solid #ccc;
+                border-bottom: 15px solid transparent;
+                content: " ";
+            }
+
+            .timeline > li > .timeline-panel:after {
+                position: absolute;
+                top: 27px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #fff;
+                border-right: 0 solid #fff;
+                border-bottom: 14px solid transparent;
+                content: " ";
+            }
+
+        .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            margin-left: -25px;
+            background-color: #999999;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+
+            .timeline > li.timeline-inverted > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            .timeline > li.timeline-inverted > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+    background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+    .timeline-body > p + p {
+        margin-top: 5px;
+    }
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}
+
+
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  html, body {
+        font-size: 0.5vw !important;
+    }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+ html, body {
+        font-size: 0.8vw;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
