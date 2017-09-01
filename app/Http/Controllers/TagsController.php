@@ -16,7 +16,7 @@ class TagsController extends Controller
      public function index()
       {
           // get all tags
-          $tags = Tag::paginate(20);
+          $tags = Tag::paginate(10);
 
           // submit tags to the Tags index page
           return view('admin.tags.index')->withTags($tags);

@@ -1,5 +1,12 @@
 <?php
 
+// define('RDS_HOST_NAME', 'aa18kfbsszpoxqh.c7sgh3n4rdox.eu-west-2.rds.amazonaws.com');
+// define('RDS_USERNAME', $_SERVER['RDS_USERNAME']);
+// define('RDS_PASSWORD', $_SERVER['RDS_PASSWORD']);
+// define('RDS_DB_NAME', $_SERVER['RDS_DB_NAME']);
+// define('RDS_DB_PORT', $_SERVER['RDS_DB_PORT']);
+
+
 return [
 
     /*
@@ -41,6 +48,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
+            // 'host' => RDS_HOST_NAME,
+            // 'port' => RDS_DB_PORT,
+            // 'database' => RDS_DB_NAME,
+            // 'username' => RDS_USERNAME,
+            // 'password' => RDS_PASSWORD,
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),

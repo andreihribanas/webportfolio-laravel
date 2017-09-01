@@ -24,14 +24,22 @@ Route::post('/contact', 'HomeController@postContact')->name('contact.send');
 
 // Admin routes - prefix it -- apply middleware auth
 Route::group(['prefix' => 'admin', 'middleware' => ['auth']], function() {
+    Route::get('/', 'HomeController@getAdmin')->name('admin.index');
+
     Route::resource('/projects', 'ProjectsController');
     Route::get('/projects/{project}/toggle', 'ProjectsController@toggleVisible')->name('projects.toggleVisible');
     Route::get('/projects/{id}/images', 'ProjectsController@showImages')->name('projects.images');
     Route::post('/projects/images', 'ProjectsController@uploadImages')->name('projects.images.upload');
+    Route::DELETE('/projects/images/{image}', 'ProjectsController@deleteImage')->name('projects.image.delete');
 
-    Route::get('/', 'HomeController@getAdmin')->name('admin.index');
+
     Route::get('/messages', 'MessagesController@index')->name('messages.index');
     Route::get('/messages/{id}', 'MessagesController@show')->name('messages.show');
     Route::post('/messages/{message}', 'MessagesController@reply')->name('messages.reply');
+    Route::DELETE('/messages/{message}', 'MessagesController@destroy')->name('messages.destroy');
+
     Route::resource('/tags', 'TagsController', ['except' => ['create', 'show']]);
+
+    Route::resource('/testimonials', 'TestimonialsController', ['except' => ['create']]);
+    Route::get('/testimonials/{id}/toggle', 'TestimonialsController@toggleVisible')->name('testimonials.toggleVisible');
 });

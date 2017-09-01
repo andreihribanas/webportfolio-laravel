@@ -7,8 +7,8 @@
   <div class="container">
 
     <div class="row">
-      <div class="col-md-8 offset-md-2 card-block">
-          <a href="{{ route('messages.index')}}" class="btn btn-lg btn-block btn-secondary"> Go back </a>
+      <div class="col-md-12 card-block">
+          <a href="{{ route('messages.index')}}" class="btn btn-lg btn-block btn-primary"> Go back </a>
       </div>
 
     </div>

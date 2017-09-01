@@ -74,7 +74,6 @@ function flipCards(n){
             speed: 1000
         }, function(){
                 $("#card").on('flip:done', function(){
-
             });
         });
     }

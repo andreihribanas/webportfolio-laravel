@@ -4,6 +4,13 @@
 
 @section('content')
 
+
+  <div class="jumbotron jumbotron-fluid jumbotron-top">
+      <div class="container">
+        <h3 class="display-1 text-center"> <strong>Login</strong> </h3>
+      </div>
+  </div>
+
 <section>
     <div class="container">
 
@@ -16,12 +23,12 @@
             </div>
 
               <div class="row">
-                  <div class="col-md-10 col-md-offset-1">
+                  <div class="col-md-10 ">
                       <div class="card">
-                          <div class="card-header">Login</div>
+
                           <div class="card-block">
 
-                              <form class="form-horizontal col-md-10 offset-md-1" role="form" method="POST" action="{{ route('login') }}">
+                              <form class="form-horizontal col-md-12" role="form" method="POST" action="{{ route('login') }}">
                                   {{ csrf_field() }}
 
                                   <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">

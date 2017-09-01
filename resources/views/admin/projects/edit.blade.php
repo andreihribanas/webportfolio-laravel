@@ -83,8 +83,10 @@
   <script type="text/javascript">
     tinymce.init({
       selector: 'textarea',
-      plugins: 'link code',
-      menubar: false
+      plugins: 'link code wordcount',
+			toolbar: 'undo redo pastetext | style select | fontselect | fontsizeselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | print preview media fullpage | forecolor backcolor',
+      menubar: true,
+			forced_root_block: false
     });
   </script>
 @endsection

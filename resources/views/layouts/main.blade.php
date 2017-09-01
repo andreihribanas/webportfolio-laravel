@@ -11,7 +11,9 @@
         <!-- FontAwesome icons cdn link -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Local style sheet file -->
-        <link href="{{ asset('css/main.css') }}" media="all" rel="stylesheet" type="text/css">
+        {{-- <link href="https://www.andreihribanas.co.uk/css/main.css" media="all" rel="stylesheet" type="text/css"> --}}
+        {{-- <link href="{{ asset('css/main.css') }}" media="all" rel="stylesheet" type="text/css"> --}}
+        <link href="{{ asset('https://www.andreihribanas.co.uk/css/main.css') }}" media="all" rel="stylesheet" type="text/css">
 
     		<!-- Load other css files -->
     		@yield('stylesheets')
@@ -52,24 +54,27 @@
 
                                 <hr><br>
 
-                                <h6> <strong>&copy; 2016 COPYWRIGHT . ALL RIGHTS RESERVED. </strong></h6>
+                                <h6> <strong>&copy; 2016 </strong></h6>
                                 <h6> <strong> DESIGNED BY ANDREI HRIBANAS </strong></h6>
                             </div>
                         </div>
                     </div>
                 </div>
             </footer><!-- end of footer -->
-<script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+
+            <!-- Mcafee icon -->
+            <script type="text/javascript" src="https://cdn.ywxi.net/js/1.js" async></script>
+
             <!-- jQuery first, then Tether, then Bootstrap JS. -->
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+            <script  src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+            <script  src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+            <script  src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
             <!--  JQuery flip plugin -->
-            <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+            <script  src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
             <!-- Load other internal or custom script files. -->
-            <script src="{{ asset('js/app.js') }}"></script>
+            <script  src="https://www.andreihribanas.co.uk/js/app.js"></script>
 
             @yield('scripts')
 

@@ -57,8 +57,24 @@ class MessagesController extends Controller
     // set flash message
     Session::flash('success', 'Reply sent to ' . $request->from);
 
-    // redirect user to messages
+    // redirect user to messages index
     return redirect()->route('messages.index');
+
+    }
+
+
+    public function destroy($id) {
+        // get message
+        $message = Message::find($id);
+
+        // delete message record
+        $message->delete();
+
+        // set flash  with success message
+        Session::flash('success', 'The message was deleted succesfully.');
+
+        // redirect to messages index
+        return redirect()->route('messages.index');
 
     }
 

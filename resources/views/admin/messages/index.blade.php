@@ -38,7 +38,10 @@
                       <td> {{ substr($message->content, 0, 15) }}{{ strlen($message->content) > 15 ? "..." : "" }} </td>
                       <td class="btn-group-sm">
                        <a href="{{ url('admin/messages/'.$message->id) }}" class="btn btn-sm btn-secondary"> View full message </a>
-                       {{-- <a href=# class="btn btn-sm btn-primary"> Send reply </a> --}}
+                       {{-- <a href="#" class="btn btn-sm btn-danger"> Send reply </a> --}}
+                       {!! Form::open(['route' => ['messages.destroy', $message->id], 'method' => 'DELETE', 'class' => 'btn-inline']) !!}
+                          {{ Form::submit('Delete', ['class' => 'btn btn-sm btn-danger']) }}
+                       {!! Form::close() !!}
                      </td>
                   </tr>
                   @endforeach

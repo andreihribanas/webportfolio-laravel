@@ -9,6 +9,7 @@ use App\ProjectImage;
 use Session;
 use Image;
 use Storage;
+use File;
 
 class ProjectsController extends Controller
 {
@@ -52,7 +53,7 @@ class ProjectsController extends Controller
         // validate input data
         $this->validate($request, [
             'name' => 'required | min:3 | max:50',
-            'description' => 'required | min:3 | max: 50',
+            'description' => 'required | min:3 | max: 100',
             'content' => 'nullable | min:5 | max:5000',
             'type' => 'nullable | min:3 | max:100',
             'complexity' => 'nullable | integer | min:1 | max:5',
@@ -128,11 +129,11 @@ class ProjectsController extends Controller
       // validate input data
       $this->validate($request, [
           'name' => 'required | min:3 | max:50',
-          'description' => 'required',
-          'content' => 'required | min:5 | max:5000',
-          'type' => 'required',
-          'complexity' => 'required | integer | min:1 | max:5',
-          'source_code' => 'required | url'
+          'description' => 'required | max:100',
+          'content' => 'nullable | min:5 | max:5000',
+          'type' => 'nullable | max: 100',
+          'complexity' => 'nullable | integer | min:1 | max:5',
+          'source_code' => 'nullable | url'
       ]);
 
       $project = Project::find($id);
@@ -167,6 +168,27 @@ class ProjectsController extends Controller
 
         // unsync tags linked to project
         $project->tags()->detach();
+
+        // collect images
+        $photos = array();
+        foreach($project->images as $image){
+           array_push($photos, $image);
+        }
+
+        // get all project images records
+        $imageOb = ProjectImage::where('project_id', $id)->get();
+
+        // delete all images
+        foreach($photos as $photo){
+          $file= $photo->filename;
+          $filename = public_path().'/uploads/'.$file;
+          File::delete($filename);
+        }
+
+        // delete all images records
+        foreach($imageOb as $image){
+          $image->delete();
+        }
 
         // delete project
         $project->delete();
@@ -209,10 +231,17 @@ class ProjectsController extends Controller
 
     public function uploadImages(Request $request) {
 
+
+          $this->validate($request, [
+            'images' => 'required',
+            'images.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:3096'
+          ]);
+
           $files = $request->file('images');
 
           if (!empty($files)) {
             foreach($files as $file) {
+
               $newImage = new ProjectImage();
               $newImage->project_id = $request->project_id;
               $newImage->filename = $file->getClientOriginalName();
@@ -226,5 +255,24 @@ class ProjectsController extends Controller
 
         // redirect to products
         return redirect()->route('projects.index');
+    }
+
+    public function deleteImage($id) {
+          // grab image object
+          $image = ProjectImage::find($id);
+
+          // delete image object
+          $image->delete();
+
+          // delete stored image
+          $file= $image->filename;
+          $filename = public_path().'/uploads/'.$file;
+          File::delete($filename);
+
+          // set flash message
+          Session::flash('success', 'Image deleted from storage.');
+
+          // redirect
+          return back();
     }
 }

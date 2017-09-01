@@ -4,6 +4,7 @@
 @section('stylesheets')
   {!! Html::style('css/parsley.css') !!}
   {!! Html::style('css/select2.min.css') !!}
+
 @endsection
 
 @section('title', ' | Create new product')
@@ -13,7 +14,7 @@
     <div class="container">
 
           <div class="row">
-              <h1 class="text-center"> Create new product </h1>
+              <h1 class="text-center"> Create new project </h1>
           </div>
 
           <hr>
@@ -88,7 +89,7 @@
     tinymce.init({
       selector: 'textarea',
       plugins: 'link code',
-      menubar: false
+      menubar: true
     });
   </script>
 @endsection

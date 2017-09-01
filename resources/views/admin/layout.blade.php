@@ -17,16 +17,18 @@
 
             <!-- Admin dashboard panel -->
             <div class="col-md-2 admin-sidebar">
-
+  <nav class="navbar">
               <h4 class="text-center"><i class="fa fa-home" aria-hidden="true"> <strong> DASHBOARD </strong> </i></h4>
                 <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="/admin/index"> Stats overview </a> <div class="dropdown-divider"></div>
+                <ul class="navbar-nav">
                   <a class="dropdown-item" href="{{ route('tags.index') }}"> Tags </a> <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{ route('projects.index') }}"> Projects </a> <div class="dropdown-divider"></div>
+                  <li class="nav-item "><a class="dropdown-item {{ Request::is('projects') ? 'active' : '' }}" href="{{ route('projects.index') }}"> Projects </a> <div class="dropdown-divider"></div></li>
                   <a class="dropdown-item" href="{{ route('messages.index') }}"> Messages </a><div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{{ route('testimonials.index') }}"> Testimonials </a><div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{ route('logout') }}"> Logout </a>
-
+</ul>
                 <div class="dropdown-divider"></div>
+              </nav>
             </div> <!-- end of admin dashboard panel -->
 
             <!-- Content page -->

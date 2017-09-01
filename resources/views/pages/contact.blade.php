@@ -3,6 +3,7 @@
 @section('title', ' | Contact page')
 
 @section('content')
+  
           <section id="contact">
                   <div class="container">
 

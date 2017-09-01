@@ -14,11 +14,20 @@
                   <p class="subText"> Nothing is impossible! </p>
           </div>
 
+            <div class="container disclaimer">
+              <div class="alert alert-info" role="alert">
+                <strong>
+                  <p> You might encounter some responsiveness issues if the page is viewed on mobile devices, work is being undertaken to ensure every display error is corrected. </p>
+                  <p> If you encounter a bug while navigating on the website, please report it using the contact form or at andrei.hribanas@gmail.com . Much apreciated. </p>
+                 </strong>
+              </div>
+            </div>
+
         <!-- Back to top button -->
         <a href="#" class="top"><i class="fa fa-chevron-circle-up fa-5x" aria-hidden="true"></i></a>
 
       <!---   QUOTE   ------------------------------------------------------->
-          <section id="quote">
+          <section id="quote" class="grey-background">
               <div class="container">
                   <div class="row text-center">
                       <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 text-center">
@@ -40,7 +49,7 @@
                 <div class="container">
 
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center">
                             <br> <h1 class="section-heading"> About me</h1>
                             <h3 class="section-subheading text-muted"> Fun facts and hobbies </h3> <br><br>
                         </div>
@@ -48,17 +57,19 @@
 
                     <div class="row">
                         <div class="col-md-3 text-center">
-                            <img src="images/personal-min.jpg" alt="The image could not be loaded ..." class="img-circle img-responsive personal-image">
+                            <img src="https://www.andreihribanas.co.uk/images/personal-min.jpg" alt="The image could not be loaded ..." class="img-circle img-responsive personal-image">
                         </div>
 
                         <div class="col-md-8 offset-md-1 text-center">
                             <h4 class="section-subheading text-justify" id="about-description">
                                 I am a Computer Science graduate from City University London, looking forward to kickstart my career in the IT industry and develop myself in a true professional. <br><br>
                                 My interest lies primarily in the Web development, trying to acquire and develop new coding skills at any time, on the path to gain a Full Stack Developer knowledge. Currently working with HTML, CSS, JavaScript & jQuery,
-                                  Bootstrap and PHP with Laravel. <br><br>
+                                  Bootstrap and PHP with Laravel framework. <br><br>
                                 My short term goal is to enrich my "young" portfolio by tackling a different range of projects that calls for a different skill set. <br><br>
 
-                                More a backend developer at heart rather than a web designer, but I do not pass the opportunity to create something beautiful and pleasing to the eye.<br><br>
+                                More a backend developer at heart rather than a web designer, but I do not pass the opportunity to create something beautiful and pleasing to the eye. Currently looking to improve my Front-End skills by gaining knowledge in
+                                JavaScript frameworks such as Angular and VUE.
+                                <br><br>
 
                                 Find out more below!
                             </h4>
@@ -69,24 +80,24 @@
 
                     <br> <br> <br>
 
-                <div class="col-md-12">
+
                     <div class="row">
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 text-center">
-                            <div id="card1">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                            <div id="card1" class="fun-facts-cards text-center">
                                 <div class="front">  </div>
                                 <div class="back fun-facts-format"> Beside the software side, also have an interest in the computer hardware - evidence lies in building computers from scratch. <br> Check out the latest and current <a href="#" id="build"> build! </a></div>
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 text-center">
-                            <div id="card2">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                            <div id="card2" class="fun-facts-cards text-center">
                                 <div class="front">  </div>
                                 <div class="back fun-facts-format"> I played football for over a decade, joined the local club when I was 6 years old. Played professionally for the youth team before commiting to studies. </div>
                             </div>
                         </div>
 
-                        <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 text-center">
-                            <div id="card3">
+                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                            <div id="card3" class="fun-facts-cards text-center">
                                 <div class="front"> </div>
                                 <div class="back fun-facts-format"> Big fan of the SciFi genre, love watching movies and TV shows especially those ones that can be included in this category and not only. <p> May the Force be with me!</p> </div>
                             </div>
@@ -94,38 +105,34 @@
 
                     </div>
 
-
-
-
                 <div class="row ">
-                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 text-center">
-                        <div id="card4">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <div id="card4" class="fun-facts-cards text-center">
                             <div class="front"> </div>
                             <div class="back fun-facts-format"> I have completed a spell of couple years working in Accounting & Finance, before dedicating completely to my true professional interest - the IT industry. </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 text-center">
-                        <div id="card5">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <div id="card5" class="fun-facts-cards text-center">
                             <div class="front">  </div>
                             <div class="back fun-facts-format"> I avoid performing any activity that involves heights since I manifest a very acute fear. <br> Scare of heights: really?! Unfortunately yes ! </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 text-center">
-                        <div id="card6">
+                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <div id="card6" class="fun-facts-cards text-center">
                             <div class="front"> </div>
                             <div class="back fun-facts-format"> Not a fan of the social media, I am more the type of person that appreciates privacy. However, I manage a LinkedIn account for the professional contacts.  </div>
                         </div>
                     </div>
                 </div>
-</div>
 
               </div>
             </section>
 
-            <!--------------------------------------------   SERVICES SECTION    ------------------------------------------------------->
-                    <section id="services">
+            <!---  SERVICES SECTION    ------------------------------------------------------->
+                    <section id="services" class="grey-background">
                         <div class="container">
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-12 text-center">
@@ -247,7 +254,123 @@
 
                     <!---   SKILLS SECTION    ------------------------------------------------------->
                     <div class="container">
-                        <section id="skills">
+                        <section id="skills" >
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                   <br> <h1 class="section-heading"> Skills </h1>
+                                    <h3 class="section-subheading text-muted"> Main skills and future aspirations </h3> <br><br>
+                                </div>
+                            </div>
+
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <h6 class="skills-format"> <strong> Programming languages, libraries, frameworks and techniques </strong></h6>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h6 class="skills-format">
+                                        <ul class="fa-ul">
+                                            <li> <i class="fa-li fa fa-check-square"></i> Java SE </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> PHP </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> PHP Laravel </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> JavaScript </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> JQuery</li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> JSON </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> AJAX </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Parsley.js (validation) </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> TinyMCE (WYSIWYG editor) </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Stripe.js (payments processor) </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> HTML </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> CSS </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Bootstrap 4</li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Wordpress </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> MySQL </li>
+                                        </ul>
+                                    </h6>
+                                </div>
+                            </div>
+
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <h6 class="skills-format"> <strong>Development tools</strong> </h6>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h6 class="skills-format">
+                                        <ul class="fa-ul">
+                                            <li> <i class="fa-li fa fa-check-square"></i> NetBeans IDE </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Eclipse IDE </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Visual Studio (casual) </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Notepad++ </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Brackets </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> SublimeText </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Atom </li>
+
+                                        </ul>
+                                    </h6>
+                                </div>
+                            </div>
+
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <h6 class="skills-format"> <strong>DevOps tools</strong> </h6>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h6 class="skills-format">
+                                        <ul class="fa-ul">
+                                            <li> <i class="fa-li fa fa-check-square"></i> XAMPP (local development) </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> FileZilla </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Amazon Web Services (EC2 instances, ElasticBeanStalk deployment, AWS RDS, Route 53 for DNS configuration, Certificate Manager to import SSL) </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Google Cloud tools </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Microsoft Azure </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Virtual Box </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> VMWare Workstation </li>
+                                            <li> <i class="fa-li fa fa-square"></i> Docker </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Git / Github </li>
+                                        </ul>
+                                    </h6>
+                                </div>
+                            </div>
+{{--
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <h6 class="skills-format"><strong> Operating systems</strong> </h6>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h6 class="skills-format">
+                                        <ul class="fa-ul">
+                                            <li> <i class="fa-li fa fa-check-square"></i> Windows 7 / 8 / 10 </li>
+                                            <li> <i class="fa-li fa fa-check-square"></i> Linux / Unix (basic commands) </li>
+                                        </ul>
+                                    </h6>
+                                </div>
+                            </div> --}}
+
+                            <div class="row text-center">
+                                <div class="col-md-6">
+                                    <h6 class="skills-format"> <strong>To learn stack </strong> </h6>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <h6 class="skills-format">
+                                        <ul class="fa-ul">
+                                            <li> <i class="fa-li fa fa-square"></i> Node.js </li>
+                                            <li> <i class="fa-li fa fa-square"></i> Angular.js </li>
+                                            <li> <i class="fa-li fa fa-square"></i> VUE.js </li>
+                                            <li> <i class="fa-li fa fa-square"></i> d3.js </li>
+                                            <li> <i class="fa-li fa fa-square"></i> Google Chart API </li>
+                                            <li> <i class="fa-li fa fa-square"></i> Python </li>
+                                            <li> <i class="fa-li fa fa-square"></i> Django </li>
+                                            <li> <i class="fa-li fa fa-square"></i> NoSQL databases/MongoDB </li>
+                                            <li> <i class="fa-li fa fa-square"></i> Windows Server administration / Active Directory / Hyper-V </li>
+                                        </ul>
+                                    </h6>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- <section id="skills" >
                             <div class="row">
                                 <div class="col-lg-12 text-center">
                                    <br> <h1 class="section-heading"> Skills </h1>
@@ -427,7 +550,7 @@
                                     </h6>
                                 </div>
                             </div>
-                        </section>
+                        </section> -->
                     </div>
 
 
@@ -435,7 +558,7 @@
 
                     <!--------------------------------------------   EDUCATION SECTION    ------------------------------------------------------->
 
-                    <section id="education">
+                    <section id="education" class="grey-background">
 
                             <div class="row">
                                 <div class="col-lg-12 text-center">
@@ -688,6 +811,32 @@
 
                     </section>
 
+
+                    <section id="testimonials">
+                        <div class="container">
+
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <br> <h1 class="section-heading "> Testimonials </h1>
+                                    <h3 class="section-subheading text-muted"> Short description of past contact experiences </h3> <br><br>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                  @foreach($testimonials as $testimonial)
+                                          <div class="col-md-4 ">
+                                              <h4 class="section-subheading text-muted text-center"> {{ $testimonial->description }} </h4>
+                                              <p class="text-justify"> <i class="fa fa-quote-left" aria-hidden="true"></i> {{ $testimonial->message }}  <i class="fa fa-quote-right" aria-hidden="true"> </i> </p> <br>
+                                              <h6 class="text-center"> <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i> </h6> <br>
+                                              <h6 class="text-center"> <strong>{{ $testimonial->author }} </strong> </h6>
+                                              <h6 style="color:purple" class="text-center"> <strong>{{ $testimonial->role }} </strong> </h6> <br>
+                                          </div>
+                                  @endforeach
+                            </div>
+
+                        </div>
+                    </section>
+
               @section('scripts')
                 <script type="text/javascript">
 
@@ -704,13 +853,6 @@
                             // JS validation for the contact form
                             validateContactForm();
 
-                             lightbox.option({
-                                'resizeDuration': 1000,
-                                    'wrapAround': true,
-                                 'maxWidth': 20000,
-                                 'maxHeigth': 20000
-
-                    })
 
                         </script>
 

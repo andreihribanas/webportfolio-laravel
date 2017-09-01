@@ -1,7 +1,7 @@
 /*  Import new fonts  */
 @font-face {
     font-family:"MysteryCurse";
-    src: url("font.ttf") /* TTF file for CSS3 browsers */
+    src: url("font.ttf"); /* TTF file for CSS3 browsers */
 }
 
 /* Declare color constants
@@ -11,18 +11,29 @@ $grey = #ECEEEF;
 
 
 /*      ------------- General page settings ----------------           */
-.img-cont{
-    width: 100%;
+.grey-background {
+  background-color: #ECEEEF;
 }
 
-html, body {
+.blue-background {
+  background-color: #0275D8;
+}
+
+.img-cont{
+    width: 100%;
+    margin-bottom: 10%;
+}
+
+
+html {
     font-family: "Times New Roman";
-    font-size: 0.9rem;
+    font-size: 16px;
 }
 
 body{
     position: relative;
     background: none;
+    font-size: 0.9rem;
 }
 
 .jumbotron {
@@ -56,7 +67,6 @@ section {
     padding: 1%;
 }
 
-
 .nameText, .subText {
     position: absolute;
     font-size: 4vw;
@@ -73,17 +83,18 @@ section {
     left: 10%;
 }
 
-
+.disclaimer {
+  padding: 1%;
+}
 
 #contact, #services, #quote, #education, .jumbotron-border {
-    background-color: #ECEEEF;
     border-top: 0.1em solid #0275D8;
     border-top-width: thick;
     border-bottom: 0.1em solid #0275D8;
     border-bottom-width: thick;
     margin-top: 0;
-}
 
+}
 
 .top {
     position: fixed;
@@ -122,7 +133,7 @@ section {
 /*      ------------- Navigation settings ----------------           */
 
 #navbarNavDropdown{
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .nav-tabs {
     border: none;
@@ -146,15 +157,19 @@ section {
 
 .blockquote {
     font-family: MysteryCurse;
-    font-size: 4vw;
+    font-size: 4vmax;
 }
 /*      -----------------------------------------------------------------------           */
 
 /*      ------------- About settings ----------------           */
 
+#about {
+  font-size: 0.9rem;
+}
+
 #about-description {
     text-align: justify;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     line-height: 2.5rem;
 }
 
@@ -162,13 +177,13 @@ section {
     background-color: white;
     border: 0.5rem solid #0275D8;
     border-radius: 50%;
-    width: 110%;
+    width: 100%;
     padding: 1%;
 }
 
-#card1, #card2, #card3, #card4, #card5, #card6 {
-    height: 12vw;
-    width: 12vw;
+.fun-facts-cards {
+    height: 14rem;
+    width: 14rem;
     margin: 2rem 0;
     text-align-last: center;
 }
@@ -192,7 +207,7 @@ section {
     border: 0.5rem solid #0275D8;
     border-radius: 20%;
     padding: 5%;
-    font-size: 0.8vw;
+    font-size: 0.75rem;
 }
 /*      -----------------------------------------------------------------------           */
 
@@ -271,17 +286,9 @@ section {
   left: -20vw;
 }
 
-.presentation-image {
-    width: 10rem;
-    height: 10rem;
-}
-
-
-
 .project-layout {
     background-color: white;
     text-align: justify;
-   /* font-family: */
     line-height: 2rem;
 }
 
@@ -300,7 +307,7 @@ section {
 
 }
 
-.project-left-item {
+.project-item-title {
     padding: 1% 5%;
     text-align: center;
     background-color: #ECEEEF;
@@ -335,7 +342,22 @@ section {
     line-height: 2rem;
 }
 
-data-lightbox { width:200rem; height:200rem; }
+.panel-item {
+  margin: 0 10%;
+  padding: 5%;
+}
+
+.badge {
+    display: inline-block;
+}
+
+/*.modal {
+  width: 80vw;
+  height: 100vh;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+}*/
 
 /*      -----------------------------------------------------------------------           */
 
@@ -640,58 +662,6 @@ transition: all 0.9s ease-in-out;
         }
 }
 
-
-
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-  html, body {
-        font-size: 0.5vw !important;
-    }
-}
-
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width : 321px) {
-/* Styles */
-}
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-/* Styles */
-}
-
-/* iPads (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
-}
-
-/* iPads (landscape) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
-/* Styles */
-}
-
-/* iPads (portrait) ----------- */
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
-/* Styles */
-}
-/**********
-iPad 3
-**********/
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-
-@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
-/* Styles */
-}
-/* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1224px) {
- html, body {
-        font-size: 0.8vw;
-    }
-}
-
-/* Large screens ----------- */
-@media only screen  and (min-width : 1824px) {
-/* Styles */
+.bt {
+  display: block;
 }
