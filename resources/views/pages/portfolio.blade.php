@@ -32,12 +32,13 @@
 
           <div class="container">
 
+            <!-- Individual projects cards -->
               <div class="row">
                   @foreach ($projects as $project)
                     @if ($project->visible)
-                        <div class="col-md-4 col-lg-4 col-xl-4"> <!--- PowerBuddies project -->
-                            <div class="card" data-toggle="modal" data-target="#modal-project-{{$project->id}}">
-                              <img class="card-img-top" src="https://www.andreihribanas.co.uk/images/logo.png" alt="Card image cap">
+                        <div class="col-md-4 col-lg-4 col-xl-4">
+                            <div class="card" data-toggle="modal" data-target="#moda-project-{{$project->id}}" id="{{$project->id}}" onclick="getProject(this.id)">
+                              <img class="card-img-top" src="images/logo.png" alt="Card image cap">
                                   <div class="card-block">
                                     <h3 class="card-title"> <strong> {{ $project->name }} </strong> </h3>
                                     <p class="card-text"> {{ $project->description }}. <br><br> Click on the card for more details! </p>
@@ -46,185 +47,18 @@
                             </div>
                         </div> <!-- end of project -->
 
-                        <div class="modal fade" id="modal-project-{{$project->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                          <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content modal-project-content">
-                              <div class="modal-header card-header">
-                                <h4 class="modal-title" id="exampleModalLongTitle"> {{ $project->name }}</h4>
-                                <button type="button" class="btn btn-md pull-right btn-primary" data-dismiss="modal" aria-label="Close"> Close </button>
-                              </div>
-
-                              <div class="modal-body">
-
-                                  <div class="row project-layout">
-                                    <div class="project-left-panel col-md-3 text-justiy">
-                                          <div class="form-group">
-                                              <div class="row"> <h5 class="col-md-10 project-item-title"> <strong> Project type </strong>  </h5> </div>
-                                              <div class="row panel-item text-center"> <div class="col-md-8 offset-md-2"> <strong> {{$project->type}} </strong> </div> </div>
-
-
-                                          </div>
-
-                                          <br>
-
-                                          <div class="form-group">
-                                              <h5 class="col-md-10 project-item-title"> <strong> Project complexity </strong> </h5>
-                                              <div class="col-md-10 text-center panel-item">
-                                                   {{-- <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> <i class="fa fa-star-o"></i> --}}
-
-                                                    @if ($project->complexity)
-                                                      <?php
-                                                         $stars = '';
-                                                          for ($i=0; $i < $project->complexity; $i++ ) {
-                                                            $stars .= '<i class="fa fa-star"></i>';
-                                                          }
-
-                                                          for ($i=0; $i < 5- $project->complexity; $i++ ) {
-                                                            $stars .= '<i class="fa fa-star-o"></i>';
-                                                          }
-                                                        ?>
-                                                   @if ($stars) {!! $stars !!} @endif
-                                                    @endif
-                                              </div>
-                                          </div>
-
-                                          <br>
-
-                                           <div class="form-group">
-                                              <h5 class="col-md-10 project-item-title"> <strong> Production tools </strong> </h5>
-
-                                               <div class="col-md-10 text-center panel-item">
-                                                 @foreach ($project->tags as $tag)
-                                                    <p class="badge badge-primary badge-pill"> {{ $tag->name }} </p>
-                                                 @endforeach
-                                               </div>
-                                          </div>
-
-                                          <br>
-
-                                           <div class="form-group">
-                                              <h5 class="col-md-10 project-item-title"> <strong> Source code </strong> </h5>
-                                               <div class="col-md-10 text-center">
-                                                  <span> <a href="{{$project->source_code}}" class="btn btn-sm btn-primary"> <strong> Github Repository</strong> </a> </span>
-                                              </div>
-                                          </div>
-
-                                          <br>
-                                    </div>
-
-
-
-                                      <div class="col-md-8 project-right-panel">
-
-                                          <div class="form-group"> <!-- Project description -->
-                                              <h3 class="project-item-title"> <strong> Short description </strong> </h3> <br>
-                                          </div>
-
-                                          <div class="form-group"> <!-- Project images -->
-
-                                            <div class="row">
-                                                @foreach($project->images as $image)
-                                                  <div class="col-md-4">
-                                                    {{-- <a href="{{ asset('uploads/' . $image->filename)}}" data-lightbox="{{ str_replace(' ', '', $project->name) }}" data-title="{{ str_replace(' ', '', $project->name) }}">  {{ Html::image('uploads/' . $image->filename, null, ['class' => 'img-cont']) }} </a> --}}
-                                                    <a href="{{ 'https://www.andreihribanas.co.uk/uploads/' . $image->filename}}" data-lightbox="{{ str_replace(' ', '', $project->name) }}" data-title="{{ str_replace(' ', '', $project->name) }}">  {{ Html::image('uploads/' . $image->filename, null, ['class' => 'img-cont']) }} </a>
-                                                  </div>
-                                                @endforeach
-                                            </div>
-
-
-                                          </div>
-
-                                          <br>
-                                          <div class="form-group text-justify project-description">
-
-                                                 <p> {!! $project->content !!} </p>
-
-                                              <br>
-
-                                              <!-- <div class="row">
-                                                 <div class="col-md-6">
-                                                      <div class="row">
-                                                          <a href="{{asset('/projects/savetigers') }}" class="btn btn-primary btn-lg"> <i class="fa fa-play" aria-hidden="true"></i>  Launch website </a>
-                                                      </div>
-                                                 </div>
-
-                                                 <div class="col-md-6">
-                                                     <a href="./projects/blog/" class="btn btn-primary btn-lg"> <i class="fa fa-book" aria-hidden="true"></i> Read more </a>
-                                                 </div>
-                                              </div> -->
-
-                                          </div>
-
-                                          <br>
-
-                                    </div>
-                                </div>
-
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
                       @endif
                   @endforeach
 
-              </div> <!-- end of row -->
-          </div>
+              </div> <!-- end of individual projects listing -->
 
-
-          <!-- <div class="modal fade" id="modal-project-{{$project->id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-            <div class="modal-dialog modal-lg" role="document">
-              <div class="modal-content modal-project-content">
-                <div class="modal-header card-header">
-                  <h4 class="modal-title" id="exampleModalLongTitle"> {{ $project->name }}</h4>
-                  <button type="button" class="btn btn-md pull-right btn-primary" data-dismiss="modal" aria-label="Close"> Close </button>
-                </div>
-
-                <div class="modal-body">
-        <div class="container">
-                    <div class="row">
-                        <div class="col-md-4"> <strong>Type:</strong> {{ $project->type }} </div>
-                        <div class="col-md-4">
-                          <strong class="project-lef">Complexity:</strong>
-
-                          {!! $stars !!}
-                        </div>
-                        <div class="col-md-4">
-                          <strong>Production tools:</strong>
-                          @foreach ($project->tags as $tag)
-                             <span class="badge badge-primary badge-pill"> {{ $tag->name }} </span>
-                          @endforeach </div>
-                    </div>
-<br>
-                    <div class="row">
-                        <div class="col-md-12">
-                          <h3 class="text-center"><strong>Short description</strong> </h3><br>
-
-                          @foreach($project->images as $image)
-                            <div class="col-md-4">
-                              <a href="{{ asset('./uploads/' . $image->filename)}}" data-lightbox="{{ str_replace(' ', '', $project->name) }}" data-title="{{ str_replace(' ', '', $project->name) }}">  {{ Html::image('uploads/' . $image->filename, null, ['class' => 'img-cont']) }} </a>
-                            </div>
-                          @endforeach
-                        </div>
-
-                        <br>
-
-                        <div class="col-md-12 text-justity project-description"> <p> {!! $project->content !!} </p> </div>
-                    </div>
-<br>
-                    <div class="row">
-                          <div class="col-md-4"> <strong>Source code: </strong> </div>
-                          <div class="col-md-4"> <strong>Read more: </strong> </div>
-                          <div class="col-md-4"> <strong>Launch: </strong> </div>
-                    </div>
-
-    </div>
-
-                </div>
+            <!-- Project content -->
+              <div class="row">
+                <div class="col-md-12 text-center" id="project-content"> </div>
               </div>
-            </div>
-          </div> -->
 
+
+          </div>
 
 </section>
 @endsection
@@ -243,6 +77,105 @@
               'maxWidth': 20000,
               'maxHeigth': 20000
          });
+
+
+          function getProject(id) {
+            $.ajaxSetup({
+                headers: {
+                    'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                }
+              });
+
+
+              $.ajax({
+
+                  type: 'POST',
+                  url: '{{ URL::route('portfolio.getProject')  }}',
+                  data: {
+                    'id': id
+                  },
+                  dataType: 'json',
+                  before: function(data){
+                    alert('loading');
+                  },
+                  success: function(data){
+
+                    let getProjectTools = function(){
+                        for(let i=0; i < data.tools[0].tags.length; i++){
+                            $('.tags').append(`<p class="badge badge-primary badge-pill">  ${data.tools[0].tags[i].name}  </p>`);
+                          }
+                    }
+
+                    let getImages = function(){
+                          for(let i=0; i < data.images.length; i++) {
+                              $('.images').append(` <div class="col-md-6"> <a href="uploads/${data.images[i].filename}" data-lightbox="${data.project[0].name} (ajax)" data-title="${data.project[0].name} (ajax)"> <img src="uploads/${data.images[i].filename}" class="img-cont" alt="" /> </a> </div>`);
+                          }
+                    }
+
+                  let content =`
+                    <div class="project-wrapper">
+
+                        <!-- Title and description row  -->
+                        <div class="row project-container">
+                          <div class="col-md-10 text-center">  <strong> `+ data.project[0].name + ` - ` + data.project[0].description + ` </strong> </div>
+                          <div class="col-md-2"> <button type="button" id="hideProject" class="btn btn-md pull-right btn-primary"> Close </button></div>
+                        </div> <!-- end of title row -->
+
+                        <!-- Project details row -->
+                        <div class="row project-container">
+                          <div class="col-md-4 pjd">  <strong> Project type: </strong> `+ data.project[0].type +`  </div>
+                          <div class="col-md-4 pjd">  <strong> Complexity: </strong> `+ data.project[0].complexity +`  </div>
+                          <div class="col-md-4 pjd tags"> <strong> Project tools:
+
+                           </strong>  </div>
+                        </div> <!-- end of second row -->
+
+
+                        <!-- Project content -->
+                        <div class="row project-container">
+
+                            <!-- Project description and details -->
+                            <div class="col-md-8">
+                              <div class="row project-content">
+                                <div class="col-md-10">  `+ data.project[0].content +`  </div>
+                              </div>
+                            </div> <!-- end of project details -->
+
+                            <!-- Project images -->
+                            <div class="col-md-4">
+                                <div class="row images"> </div>
+                          </div> <!-- end of project images -->
+                      </div> <!-- end of project content -->
+
+                          <!-- Source code row -->
+                          <div class="row project-container">
+                            <div class="col-md-12 pjd">  <strong> Source code: </strong> <a href=" ${data.project[0].source_code}"  > `+ data.project[0].source_code +`  </a>  </div>
+                          </div> <!--end of source code -->
+
+                      </div> <!-- end of project wrapper --> `;
+
+                      // Display project content to DOM
+                      $('#project-content').html('');
+                      $('#project-content').append(content);
+                      $('#project-content').append(getProjectTools);
+                      $('#project-content').append(getImages);
+
+                      moveToElement('project-content');
+
+                      // Hide project function
+                      $('#hideProject').on('click', function(){
+                          $('.project-wrapper').hide();
+                      });
+
+
+                  },
+                  error: function (request, status, error) {
+                      alert(request.responseText);
+                  }
+              });
+
+          }
+
       </script>
 
 @endsection

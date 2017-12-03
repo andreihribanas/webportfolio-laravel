@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Project;
+use App\ProjectImage;
 use App\Message;
 use App\Testimonial;
 use Session;
@@ -27,7 +28,7 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index() {
-      $testimonials = Testimonial::all();
+      $testimonials = Testimonial::where('visible', '=', 1)->get();
         return view('pages.index', compact('testimonials'));
     }
 
@@ -37,6 +38,26 @@ class HomeController extends Controller
         $projects = Project::all();
 
         return view('pages.portfolio', compact('projects'));
+    }
+
+    public function getProject(Request $request){
+
+          $project = Project::where('id', $request->id)->get();
+          $images = ProjectImage::where('project_id', $request->id)->get();
+          $tools = Project::where('id', $request->id)->with('tags')->get();
+
+          // foreach($project->tags as $tag) {
+          //   array_push($tools, $tag);
+          // }
+
+
+
+        //  return response()->json($project);
+          return response()->json([
+              'project' => $project,
+              'images' => $images,
+              'tools' => $tools
+          ]);
     }
 
     public function getContact() {

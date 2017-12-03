@@ -107,3 +107,12 @@ function scrollToTop(){
 
 
 }
+
+
+function moveToElement(id){
+
+        $('html, body').animate({
+            scrollTop: parseInt($("#"+id).offset().top - 100)
+        }, 2000);
+
+}

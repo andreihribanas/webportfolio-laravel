@@ -19,6 +19,7 @@ Route::get('/logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/', 'HomeController@index')->name('home');
 Route::get('/portfolio', 'HomeController@portfolio')->name('portfolio');
+Route::post('portfolio.getProject', 'HomeController@getProject')->name('portfolio.getProject');
 Route::get('/contact', 'HomeController@getContact')->name('contact');
 Route::post('/contact', 'HomeController@postContact')->name('contact.send');
 

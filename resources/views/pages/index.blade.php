@@ -14,14 +14,14 @@
                   <p class="subText"> Nothing is impossible! </p>
           </div>
 
-            <div class="container disclaimer">
+            {{-- <div class="container disclaimer">
               <div class="alert alert-info" role="alert">
                 <strong>
                   <p> You might encounter some responsiveness issues if the page is viewed on mobile devices, work is being undertaken to ensure every display error is corrected. </p>
                   <p> If you encounter a bug while navigating on the website, please report it using the contact form or at andrei.hribanas@gmail.com . Much apreciated. </p>
                  </strong>
               </div>
-            </div>
+            </div> --}}
 
         <!-- Back to top button -->
         <a href="#" class="top"><i class="fa fa-chevron-circle-up fa-5x" aria-hidden="true"></i></a>
@@ -57,7 +57,7 @@
 
                     <div class="row">
                         <div class="col-md-3 text-center">
-                            <img src="https://www.andreihribanas.co.uk/images/personal-min.jpg" alt="The image could not be loaded ..." class="img-circle img-responsive personal-image">
+                            <img src="/images/personal-min.jpg" alt="The image could not be loaded ..." class="img-circle img-responsive personal-image">
                         </div>
 
                         <div class="col-md-8 offset-md-1 text-center">
@@ -811,35 +811,36 @@
 
                     </section>
 
+                    <!--  Display testimonials if exists or visible to public -->
+                    @if(count($testimonials) > 0)
+                      <section id="testimonials">
+                          <div class="container">
 
-                    <section id="testimonials">
-                        <div class="container">
+                              <div class="row">
+                                  <div class="col-lg-12 text-center">
+                                      <br> <h1 class="section-heading "> Testimonials </h1>
+                                      <h3 class="section-subheading text-muted"> Short description of past contact experiences </h3> <br><br>
+                                  </div>
+                              </div>
 
-                            <div class="row">
-                                <div class="col-lg-12 text-center">
-                                    <br> <h1 class="section-heading "> Testimonials </h1>
-                                    <h3 class="section-subheading text-muted"> Short description of past contact experiences </h3> <br><br>
-                                </div>
-                            </div>
+                              <div class="row">
+                                    @foreach($testimonials as $testimonial)
+                                            <div class="col-md-4 ">
+                                                <h4 class="section-subheading text-muted text-center"> {{ $testimonial->description }} </h4>
+                                                <p class="text-justify"> <i class="fa fa-quote-left" aria-hidden="true"></i> {{ $testimonial->message }}  <i class="fa fa-quote-right" aria-hidden="true"> </i> </p> <br>
+                                                <h6 class="text-center"> <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i> </h6> <br>
+                                                <h6 class="text-center"> <strong>{{ $testimonial->author }} </strong> </h6>
+                                                <h6 style="color:purple" class="text-center"> <strong>{{ $testimonial->role }} </strong> </h6> <br>
+                                            </div>
+                                    @endforeach
+                              </div>
 
-                            <div class="row">
-                                  @foreach($testimonials as $testimonial)
-                                          <div class="col-md-4 ">
-                                              <h4 class="section-subheading text-muted text-center"> {{ $testimonial->description }} </h4>
-                                              <p class="text-justify"> <i class="fa fa-quote-left" aria-hidden="true"></i> {{ $testimonial->message }}  <i class="fa fa-quote-right" aria-hidden="true"> </i> </p> <br>
-                                              <h6 class="text-center"> <i class="fa fa-user-circle-o fa-5x" aria-hidden="true"></i> </h6> <br>
-                                              <h6 class="text-center"> <strong>{{ $testimonial->author }} </strong> </h6>
-                                              <h6 style="color:purple" class="text-center"> <strong>{{ $testimonial->role }} </strong> </h6> <br>
-                                          </div>
-                                  @endforeach
-                            </div>
-
-                        </div>
-                    </section>
+                          </div>
+                      </section>
+                    @endif
 
               @section('scripts')
                 <script type="text/javascript">
-
 
                             // Flip the about cards functionality // no of cards as argument
                             flipCards(6);

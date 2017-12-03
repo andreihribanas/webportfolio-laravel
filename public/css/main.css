@@ -25,15 +25,14 @@ $grey = #ECEEEF;
 }
 
 
-html {
+html, body {
     font-family: "Times New Roman";
-    font-size: 16px;
+    font-size: 1vw;
 }
 
 body{
     position: relative;
     background: none;
-    font-size: 0.9rem;
 }
 
 .jumbotron {
@@ -60,6 +59,7 @@ body{
 
 section {
     padding: 5%;
+    font-size: 1rem;
 }
 
 .section-heading {
@@ -144,7 +144,9 @@ section {
 }
 
 .nav-link:hover {
-    background-color:white;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    text-decoration: underline;
 }
 
 .navbar-brand {
@@ -259,6 +261,28 @@ section {
 
 }
 
+.project-container {
+  border: 0.1rem solid #0275D8;
+  background: #ECEEEF;
+  padding: 0.1rem;
+}
+
+.project-content {
+  font-size: 1rem;
+  text-align: justify;
+  line-height: 2rem;
+  padding: 0 2%;
+}
+
+.pjd {
+  border-radius: 1%;
+  padding: 1%;
+}
+
+.pjd:hover{
+  background: #0275D8;
+  color: white;
+}
 /*
 
 .modal-header {
@@ -664,4 +688,42 @@ transition: all 0.9s ease-in-out;
 
 .bt {
   display: block;
+}
+
+
+
+/*  Set media queries font size */
+
+/* Large desktop */
+@media only screen and (min-width: 1921px){
+  html, body {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop */
+@media only screen and (min-width: 1024px) and (max-width: 1920px) {
+  html,body {
+    font-size: 0.8rem;
+  }
+}
+
+/* Tablets*/
+@media only screen and (min-width: 769px) and (max-width: 1023px){
+  html, body {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+/* Phone */
+@media only screen and (max-width: 768px) {
+  html,body {
+    font-size: 0.7rem;
+  }
+
+  .nav {
+    display: block;
+  }
 }
