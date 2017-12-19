@@ -56,11 +56,11 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-md-3 text-center">
+                        <div class="col-md-3 col-sm-3 col-xs-3 text-center profile">
                             <img src="/images/personal-min.jpg" alt="The image could not be loaded ..." class="img-circle img-responsive personal-image">
                         </div>
 
-                        <div class="col-md-8 offset-md-1 text-center">
+                        <div class="col-md-8 offset-md-1 col-xs-9 col-sm-9 text-center">
                             <h4 class="section-subheading text-justify" id="about-description">
                                 I am a Computer Science graduate from City University London, looking forward to kickstart my career in the IT industry and develop myself in a true professional. <br><br>
                                 My interest lies primarily in the Web development, trying to acquire and develop new coding skills at any time, on the path to gain a Full Stack Developer knowledge. Currently working with HTML, CSS, JavaScript & jQuery,
@@ -82,21 +82,21 @@
 
 
                     <div class="row">
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
                             <div id="card1" class="fun-facts-cards text-center">
                                 <div class="front">  </div>
                                 <div class="back fun-facts-format"> Beside the software side, also have an interest in the computer hardware - evidence lies in building computers from scratch. <br> Check out the latest and current <a href="#" id="build"> build! </a></div>
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
                             <div id="card2" class="fun-facts-cards text-center">
                                 <div class="front">  </div>
                                 <div class="back fun-facts-format"> I played football for over a decade, joined the local club when I was 6 years old. Played professionally for the youth team before commiting to studies. </div>
                             </div>
                         </div>
 
-                        <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                        <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
                             <div id="card3" class="fun-facts-cards text-center">
                                 <div class="front"> </div>
                                 <div class="back fun-facts-format"> Big fan of the SciFi genre, love watching movies and TV shows especially those ones that can be included in this category and not only. <p> May the Force be with me!</p> </div>
@@ -106,21 +106,21 @@
                     </div>
 
                 <div class="row ">
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                    <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
                         <div id="card4" class="fun-facts-cards text-center">
                             <div class="front"> </div>
                             <div class="back fun-facts-format"> I have completed a spell of couple years working in Accounting & Finance, before dedicating completely to my true professional interest - the IT industry. </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                    <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
                         <div id="card5" class="fun-facts-cards text-center">
                             <div class="front">  </div>
                             <div class="back fun-facts-format"> I avoid performing any activity that involves heights since I manifest a very acute fear. <br> Scare of heights: really?! Unfortunately yes ! </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-12 col-md-4 col-lg-4 col-xl-4 text-center">
+                    <div class="col-xs-9 col-sm-4 col-md-4 col-lg-4 col-xl-4 text-center">
                         <div id="card6" class="fun-facts-cards text-center">
                             <div class="front"> </div>
                             <div class="back fun-facts-format"> Not a fan of the social media, I am more the type of person that appreciates privacy. However, I manage a LinkedIn account for the professional contacts.  </div>
@@ -143,7 +143,7 @@
 
                              <div class="row text-center">
                                     <div class="col-sm-8 col-md-4 col-lg-4 col-xl-4">
-                                        <span class="fa-stack fa-4x">
+                                        <span class="fa-stack fa-4x service-card">
                                             <i class="fa fa-circle fa-stack-2x text-primary"></i>
                                             <i class="fa fa-puzzle-piece fa-stack-1x fa-inverse"></i>
 

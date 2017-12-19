@@ -9,11 +9,11 @@
 
         <!-- Bootstrap CSS cdn link-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        
         <!-- FontAwesome icons cdn link -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <!-- Local style sheet file -->
-        {{-- <link href="https://www.andreihribanas.co.uk/css/main.css" media="all" rel="stylesheet" type="text/css"> --}}
-        {{-- <link href="{{ asset('css/main.css') }}" media="all" rel="stylesheet" type="text/css"> --}}
         <link href="{{ asset('css/main.css') }}" media="all" rel="stylesheet" type="text/css">
 
     		<!-- Load other css files -->
@@ -22,6 +22,16 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-110976184-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-110976184-1');
+        </script> <!-- end ga -->
     </head>
 
     <body>
@@ -40,10 +50,6 @@
                             <div class="col-lg-12 text-center">
                                 <h2 style="color: #0275D8;"> <strong> GET IN TOUCH!  </strong></h2> <br>
 
-                                <hr>
-
-                                <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=KrkNYkVV7cOqVW0Ln5KHVrmA0NrOIb1LJ0FT4mmU6N0e88BNSgpImjBTrhw0"></script></span>
-
                                 <hr >
                                     <div class="text-center center-block">
                                         <br>
@@ -53,6 +59,10 @@
                                        <div class="footer-links"> <a href="https://codepen.io/andreihribanas/"><i class="fa fa-codepen fa-3x" aria-hidden="true"></i></a></div>
                                        <div class="footer-links"> <a href="https://www.freecodecamp.com/andreihribanas"><i class="fa fa-free-code-camp fa-3x" aria-hidden="true"></i></a></div>
                                     </div>
+
+                                <hr>
+
+                                <span id="siteseal"><script async type="text/javascript" src="https://seal.godaddy.com/getSeal?sealID=KrkNYkVV7cOqVW0Ln5KHVrmA0NrOIb1LJ0FT4mmU6N0e88BNSgpImjBTrhw0"></script></span>
 
                                 <hr><br>
 

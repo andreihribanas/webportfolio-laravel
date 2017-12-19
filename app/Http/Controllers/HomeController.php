@@ -7,8 +7,10 @@ use App\Project;
 use App\ProjectImage;
 use App\Message;
 use App\Testimonial;
+use App\Tag;
 use Session;
 use Mail;
+use App\Mail\ReceiveContact;
 
 class HomeController extends Controller
 {
@@ -46,11 +48,6 @@ class HomeController extends Controller
           $images = ProjectImage::where('project_id', $request->id)->get();
           $tools = Project::where('id', $request->id)->with('tags')->get();
 
-          // foreach($project->tags as $tag) {
-          //   array_push($tools, $tag);
-          // }
-
-
 
         //  return response()->json($project);
           return response()->json([
@@ -67,7 +64,7 @@ class HomeController extends Controller
     public function postContact(Request $request) {
           // validate input
           $this->validate($request, [
-            'name' => 'required | max:100',
+            'name' => 'required | min:3 | max:100',
             'email' => 'required | email',
             'phone_no' => 'required | digits:11',
             'subject' => 'required | min:3 | max:100',
@@ -85,10 +82,12 @@ class HomeController extends Controller
 
           // send mail
           // Mail::send('emails.contact', $data, function($message) use ($data) {
-          //     $message->from('andrei.hribanas@gmail.com');
+          //     $message->from('postmaster@andreihribanas.co.uk');
           //     $message->to($data['email']);
           //     $message->subject($data['subject']);
           // });
+
+          \Mail::to($data['email'])->send(new ReceiveContact($data));
 
           // save message in the database
           $messageSent = new Message;
@@ -107,7 +106,13 @@ class HomeController extends Controller
     }
 
     public function getAdmin() {
-      return view('admin.index');
+
+      $projects = Project::all();
+      $messages = Message::all();
+      $testimonials = Testimonial::all();
+      $tags = Tag::all();
+
+      return view('admin.index', compact('projects', 'messages', 'testimonials', 'tags'));
     }
 
 }

@@ -6,8 +6,8 @@
   <div class="jumbotron jumbotron-fluid jumbotron-top">
     <div class="container">
       <h3 class="display-1 text-center"> Web portfolio dashboard </h3>
-
-      <p class="lead text-center"> Laravel 5.4 features. Stay tuned!</p>
+      <br>
+      <p class="lead text-center"> Welcome, {{ Auth::user()->name }} </p>
     </div>
   </div>
 
@@ -18,13 +18,13 @@
             <!-- Admin dashboard panel -->
             <div class="col-md-2 admin-sidebar">
   <nav class="navbar">
-              <h4 class="text-center"><i class="fa fa-home" aria-hidden="true"> <strong> DASHBOARD </strong> </i></h4>
+              <h4 class="text-center"> <i class="fa fa-home" aria-hidden="true">  <a href="{{ route('admin.index') }}" class="dashboard"> <strong> DASHBOARD </strong> </i> </a> </h4>
                 <div class="dropdown-divider"></div>
                 <ul class="navbar-nav">
-                  <a class="dropdown-item" href="{{ route('tags.index') }}"> Tags </a> <div class="dropdown-divider"></div>
-                  <li class="nav-item "><a class="dropdown-item {{ Request::is('projects') ? 'active' : '' }}" href="{{ route('projects.index') }}"> Projects </a> <div class="dropdown-divider"></div></li>
-                  <a class="dropdown-item" href="{{ route('messages.index') }}"> Messages </a><div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="{{ route('testimonials.index') }}"> Testimonials </a><div class="dropdown-divider"></div>
+                  <a class="dropdown-item  {{ Request::is('admin/tags*') ? 'active' : '' }}" href="{{ route('tags.index') }}"> Tags </a> <div class="dropdown-divider"></div>
+                  <li class="nav-item "><a class="dropdown-item {{ Request::is('admin/projects*') ? 'active' : '' }}" href="{{ route('projects.index') }}"> Projects </a> <div class="dropdown-divider"></div></li>
+                  <a class="dropdown-item  {{ Request::is('admin/messages*') ? 'active' : '' }}" href="{{ route('messages.index') }}"> Messages </a><div class="dropdown-divider"></div>
+                  <a class="dropdown-item {{ Request::is('admin/testimonials*') ? 'active' : '' }}" href="{{ route('testimonials.index') }}"> Testimonials </a><div class="dropdown-divider"></div>
                   <a class="dropdown-item" href="{{ route('logout') }}"> Logout </a>
 </ul>
                 <div class="dropdown-divider"></div>
@@ -39,9 +39,13 @@
                   <div class="col-lg-12 col-md-12 col-sm-12">
                       @include('layouts._messages')
                   </div>
-
-              @yield('admin-content')
             </div> <!-- end of admin dashboard panel -->
+
+            <div class="row">
+                <div class="col-md-12">
+                  @yield('admin-content')
+                </div>
+            </div>
 
       </div>
     </section>

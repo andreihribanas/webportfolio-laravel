@@ -96,6 +96,12 @@ section {
 
 }
 
+
+.fa-stack:hover {
+  font-size: 5rem;
+  transition: font-size 1.5s ease-in-out;
+}
+
 .top {
     position: fixed;
     margin-right: 5%;
@@ -209,7 +215,7 @@ section {
     border: 0.5rem solid #0275D8;
     border-radius: 20%;
     padding: 5%;
-    font-size: 0.75rem;
+    font-size: 1.1rem;
 }
 /*      -----------------------------------------------------------------------           */
 
@@ -383,6 +389,20 @@ section {
         transform: translate(-50%, -50%) !important;
 }*/
 
+.dashboard {
+    color: black;
+    text-decoration: none;
+}
+
+.embed-responsive {
+  width: 100% !important;
+}
+
+.huge {
+  font-size: 2rem;
+}
+
+
 /*      -----------------------------------------------------------------------           */
 
 /*      ------------- Contact settings ----------------           */
@@ -409,6 +429,14 @@ section {
 iframe{
     height: 40rem;
 }
+
+.reply {
+  padding: 1rem;
+  border: 0.1rem solid blue;
+  background-color: #ECEEEF;
+
+}
+
 
 /*      -----------------------------------------------------------------------           */
 
@@ -726,4 +754,5 @@ transition: all 0.9s ease-in-out;
   .nav {
     display: block;
   }
+
 }

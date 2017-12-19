@@ -112,6 +112,20 @@
                           }
                     }
 
+                    let getComplexity = function(){
+                          let complexityStars = '';
+
+                          for (let i=0; i < data.project[0].complexity; i++ ) {
+                            complexityStars += '<i class="fa fa-star"></i>';
+                          }
+
+                          for (let i=0; i < 5- data.project[0].complexity; i++ ) {
+                            complexityStars += '<i class="fa fa-star-o"></i>';
+                          }
+
+                          $('.complexity').append(complexityStars);
+                    }
+
                   let content =`
                     <div class="project-wrapper">
 
@@ -124,7 +138,7 @@
                         <!-- Project details row -->
                         <div class="row project-container">
                           <div class="col-md-4 pjd">  <strong> Project type: </strong> `+ data.project[0].type +`  </div>
-                          <div class="col-md-4 pjd">  <strong> Complexity: </strong> `+ data.project[0].complexity +`  </div>
+                          <div class="col-md-4 pjd complexity">  <strong> Complexity: </strong>  </div>
                           <div class="col-md-4 pjd tags"> <strong> Project tools:
 
                            </strong>  </div>
@@ -158,6 +172,7 @@
                       $('#project-content').html('');
                       $('#project-content').append(content);
                       $('#project-content').append(getProjectTools);
+                      $('#project-content').append(getComplexity);
                       $('#project-content').append(getImages);
 
                       moveToElement('project-content');

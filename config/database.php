@@ -48,11 +48,6 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            // 'host' => RDS_HOST_NAME,
-            // 'port' => RDS_DB_PORT,
-            // 'database' => RDS_DB_NAME,
-            // 'username' => RDS_USERNAME,
-            // 'password' => RDS_PASSWORD,
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'forge'),
@@ -89,6 +84,7 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
         ],
+
 
     ],
 
